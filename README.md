@@ -22,6 +22,14 @@ Import the package in your CSS:
 @import "maskicons";
 ```
 
+Or import only the icon sets you need:
+
+```css
+@import "tailwindcss";
+@import "maskicons/tabler";
+@import "maskicons/bootstrap";
+```
+
 ```html
 <i class="tabler-outline-heart"></i>
 <i class="tabler-filled-star"></i>
