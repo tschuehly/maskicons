@@ -7,7 +7,8 @@
 	"exports": {
 		".": "./dist/index.css",
 		"./utilities": "./dist/utilities.css",
-		"./tabler": "./dist/tabler.css"
+		"./tabler": "./dist/tabler.css",
+		"./bootstrap": "./dist/bootstrap.css"
 	},
 	"files": [
 		"dist",
