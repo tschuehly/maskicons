@@ -1,6 +1,6 @@
 # maskicons
 
-Tailwind CSS v4 utilities for popular icon sets. Thanks to Tailwind’s tree-shaking, your output CSS will only include the icons you actually use.
+Tailwind CSS v4 utilities for popular icon sets. This lets you include icons with Tailwind LSP auto-complete and thanks to Tailwind’s tree-shaking, your output CSS will only include the icons you actually use.
 
 ## Supported Icon Sets
 
@@ -15,14 +15,14 @@ npm install maskicons
 
 ## Usage
 
-Import the package in your CSS:
+Just import the package in your CSS file after `tailwindcss`:
 
 ```css
 @import "tailwindcss";
 @import "maskicons";
 ```
 
-Or import only the icon sets you need:
+You can alternatively import just the icon sets that you need:
 
 ```css
 @import "tailwindcss";
@@ -30,21 +30,17 @@ Or import only the icon sets you need:
 @import "maskicons/bootstrap";
 ```
 
+Then use the CSS classes on `<i>` tags to render icons.
+
 ```html
 <i class="tabler-outline-heart"></i>
 <i class="tabler-filled-star"></i>
 <i class="bootstrap-folder"></i>
 ```
 
-Icons are rendered as masks and inherit the current text color:
+## Sizing
 
-```html
-<i class="tabler-outline-heart text-red-500"></i>
-```
-
-## Sizing Icons
-
-By default, icons are `1em`, which means they scale with the current text size. You can size them using Tailwind's `text-*` utilities:
+By default, icons are `1em`, which means they scale with the current font size. You can size them using Tailwind's `text-*` utilities:
 
 ```html
 <i class="tabler-outline-heart text-sm"></i>
@@ -52,7 +48,7 @@ By default, icons are `1em`, which means they scale with the current text size. 
 <i class="tabler-outline-heart text-2xl"></i>
 ```
 
-You can also use `size-*` utilities for explicit sizing:
+Alternatively, you can use `size-*` utilities for explicit sizing:
 
 ```html
 <i class="tabler-outline-heart size-4"></i>
@@ -60,9 +56,9 @@ You can also use `size-*` utilities for explicit sizing:
 <i class="tabler-outline-heart size-8"></i>
 ```
 
-## Icon Colors
+## Colors
 
-By default, icons inherit the current text color. You can also use the `icon-*` utility to set a specific icon color. This can be applied to a parent element to color all icons within it:
+By default, icons inherit the current text color. You can also use the `icon-*` utility to set a specific icon color. This can be applied to a parent element to color all icons inside it:
 
 ```html
 <div class="icon-blue-500">
@@ -71,7 +67,7 @@ By default, icons inherit the current text color. You can also use the `icon-*` 
 </div>
 ```
 
-## Accessibility
+## Alternative text
 
 Any text inside the icon element is visually hidden but remains accessible to screen readers. You can use this to provide alternative text:
 
@@ -81,8 +77,6 @@ Any text inside the icon element is visually hidden but remains accessible to sc
 
 ## License
 
-MIT © Joel Drapper
-
-Bootstrap Icons are licensed under the [MIT License](https://github.com/twbs/icons/blob/main/LICENSE) © The Bootstrap Authors.
-
-Tabler Icons are licensed under the [MIT License](https://github.com/tabler/tabler-icons/blob/main/LICENSE) © Paweł Kuna.
+- MIT © Joel Drapper
+- Bootstrap Icons are licensed under the [MIT License](https://github.com/twbs/icons/blob/main/LICENSE) © The Bootstrap Authors.
+- Tabler Icons are licensed under the [MIT License](https://github.com/tabler/tabler-icons/blob/main/LICENSE) © Paweł Kuna.
