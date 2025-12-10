@@ -2,7 +2,7 @@
 
 Tailwind CSS v4 utilities for popular icon sets. This lets you include icons with Tailwind LSP auto-complete and thanks to Tailwind’s tree-shaking, your output CSS will only include the icons you actually use.
 
-## Supported Icon Sets
+## Supported icon sets
 
 - **Bootstrap Icons** — [twbs/icons](https://github.com/twbs/icons)
 - **Tabler Icons** — [tabler/tabler-icons](https://github.com/tabler/tabler-icons)
@@ -67,6 +67,10 @@ By default, icons inherit the current text color. You can also use the `icon-*` 
 </div>
 ```
 
+## Positioning
+
+By default, icons are displayed `inline-block` and vertically aligned to look great next to text content. But you can can easily override this with the `block` utility.
+
 ## Alternative text
 
 Any text inside the icon element is visually hidden but remains accessible to screen readers. You can use this to provide alternative text:
@@ -74,6 +78,10 @@ Any text inside the icon element is visually hidden but remains accessible to sc
 ```html
 <button><i class="tabler-outline-trash">Delete</i></button>
 ```
+
+## Low precedence
+
+The icon utilities use `:where` selectors so they have the lowest precedence. This is why all other utilities such as `size-*` will override the defaults.
 
 ## License
 
